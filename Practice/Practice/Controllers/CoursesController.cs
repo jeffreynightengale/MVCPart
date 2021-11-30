@@ -6,9 +6,10 @@ using System.Web.Mvc;
 
 namespace Practice.Controllers
 {
-    public class HomeController : Controller
+    public class CoursesController : Controller
     {
-        public ActionResult Index()
+        // GET: Courses
+        public ActionResult Courses()
         {
             return View();
         }
