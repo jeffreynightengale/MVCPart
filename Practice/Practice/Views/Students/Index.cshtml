@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Practice.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Students</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3">
+                <a href="/Students/Details/@item.StudentID" style="text-decoration:none">
+                    <div class="student" style="width: 18rem; background-color:@item.FavoriteColor" style="text-decoration:none">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.FirstName @item.LastName</h5>
+                            <p class="card-text">My favorite color is @item.FavoriteColor.</p>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+         }
+    </div>
+</div>
+
